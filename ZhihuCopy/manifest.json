@@ -1,13 +1,14 @@
 {
-  "manifest_version": 3,
-  "name": "知乎一键复制助手",
-  "version": "1.0",
-  "description": "解除网页禁止复制和禁止选择的限制",
-  "permissions": ["activeTab", "scripting"],
-  "action": {
-    "default_title": "点击解除复制限制"
-  },
-  "background": {
-    "service_worker": "background.js"
-  }
+  "manifest_version": 3，
+  "name": "知乎全自动自由复制",
+  "version": "1.1",
+  "description": "自动解除知乎网页禁止复制和禁止选择的限制",
+  "author": "你的AI助手",
+  "content_scripts": [
+    {
+      "matches": ["https://*.zhihu.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
 }
